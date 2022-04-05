@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할리스</title>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="CSS/event.css">
+    <script>
+        $(function(){
+            $('.tabSet').each(function(){ //클래스마다 각자
+
+            var anchor = $(this).find('.tabs a'); //.tabSet 안에서 a 찾기
+            var anchor_on = $(this).find('.tabs a.on'); //a에 .on 붙은 애만 고르기
+            var on_href = anchor_on.attr('href'); //a에 .on 붙은 애한테서 href 값
+            var panels = $(this).find('.panels > div'); //.tabSet 안에서 내용 찾기
+
+        panels.hide();
+        $(on_href).show();
+        anchor.removeClass('on'); //모두 .on 제거
+
+        anchor.each(function(){  //.tabSet a들
+            var href = $(this).attr('href'); //클릭한 애 href을 찾는다
+
+            $(this).click(function(){  //클릭한 a
+
+                anchor.removeClass('on'); //모두 .on 제거
+                panels.hide();
+                $(this).addClass('on'); //클릭한 애한테 .on 부여
+                $(href).show(); //클릭한 애 href 값만 보여준다.
+
+            }); //a태그 클릭시 행동
+
+        }); //anchor each end
+
+        }); //tabSet each end
+
+        var a = 1;
+    $('.btn_all').click(function () {
+        if (a == 1) {
+            $('.box').show();
+            $(this).addClass('on');
+            a = 2
+        } else {
+            $('.box').hide();
+            $(this).removeClass('on');
+            a = 1;
+        }; //if.end
+    }); //$('.btn_all').click
+
+            //모바일 메뉴 펼치기
+    const aco = $('.m_menu li a');
+    aco.on('click',function(){
+    const item = $(this);
+    let speed = 200;
+    aco.parent().find('.sub').stop().slideUp(speed);
+    if(item.hasClass('active')){
+    item.find('.sub').stop().slideUp(speed);	
+    item.removeClass('active');
+    }else{
+    item.parent().find('.sub').stop().slideDown();
+    aco.removeClass('active');
+    item.addClass('active');
+    }
+    });
+
+
+        });//ready end
+    </script>
+</head>
+<body>
+    <header>
+        <div class="inner">
+			<div class="logo">
+				<a href="index.html"><img src="img/logo.png" alt="로고"></a>
+			</div>
+			<nav>
+				<ul class="menu">
+					<li><a href="#">메뉴</a>
+					<ul class="submenu">
+						<li><a href="#">COFFEE</a></li>
+						<li><a href="#">라떼 · 초콜릿 · 티</a></li>
+						<li><a href="#">할리치노 · 빙수</a></li>
+						<li><a href="#">스파클링</a></li>
+						<li><a href="#">푸드</a></li>
+						<li><a href="#">MD 상품</a></li>
+						<li><a href="#">MD 식품</a></li>
+					</ul>
+				</li>
+					<li><a href="#">할리스 몰</a>
+					<ul class="submenu">
+						<li><a href="#">할리스콘</a></li>
+						<li><a href="#">할리스카드</a></li>
+						<li><a href="#">구매내역</a></li>
+					</ul>
+				</li>
+					<li><a href="#">멤버십</a>
+					<ul class="submenu">
+						<li><a href="#">스마트 오더</a></li>
+						<li><a href="#">멤버십 혜택</a></li>
+					</ul>
+				</li>
+					<li><a href="event.html">이벤트 및 공지</a>
+					<ul class="submenu">
+						<li><a href="event.html">이벤트</a></li>
+						<li><a href="#">공지</a></li>
+					</ul>
+				</li>
+					<li><a href="#">매장</a>
+					<ul class="submenu">
+						<li><a href="#">매장검색</a></li>
+					</ul>
+				</li>
+					<li><a href="about.html">할리스 소개</a>
+					<ul class="submenu">
+						<li><a href="about.html">HOLLYS</a></li>
+						<li><a href="#">할리스 위치 및 연락처</a></li>
+						<li><a href="#">채용안내</a></li>
+						<li><a href="#">가맹문의 및 절차</a></li>
+						<li><a href="#">B2B 사업소개</a></li>
+					</ul>
+				</li>
+				</ul>
+				
+				<div class="clear"></div>
+			</nav>
+			<div class="sub_back"></div> 
+		</div>
+        <div class="btn_all">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+        <div class="box">
+			<ul class="m_menu">
+				<li><a href="#">메뉴</a>
+				<ul class="sub">
+					<li><a href="#">COFFEE</a></li>
+					<li><a href="#">라떼 · 초콜릿 · 티</a></li>
+					<li><a href="#">할리치노 · 빙수</a></li>
+					<li><a href="#">스파클링</a></li>
+					<li><a href="#">푸드</a></li>
+					<li><a href="#">MD 상품</a></li>
+					<li><a href="#">MD 식품</a></li>
+				</ul>
+			</li>
+				<li><a href="#">할리스 몰</a>
+				<ul class="sub">
+					<li><a href="#">할리스콘</a></li>
+					<li><a href="#">할리스카드</a></li>
+					<li><a href="#">구매내역</a></li>
+				</ul>
+			</li>
+				<li><a href="#">멤버십</a>
+				<ul class="sub">
+					<li><a href="#">스마트 오더</a></li>
+					<li><a href="#">멤버십 혜택</a></li>
+				</ul>
+			</li>
+				<li><a href="#">이벤트 및 공지</a>
+				<ul class="sub">
+					<li><a href="event.html">이벤트</a></li>
+					<li><a href="#">공지</a></li>
+				</ul>
+			</li>
+				<li><a href="#">매장</a>
+				<ul class="sub">
+					<li><a href="#">매장검색</a></li>
+				</ul>
+			</li>
+				<li><a href="#">할리스 소개</a>
+				<ul class="sub">
+					<li><a href="about.html">HOLLYS</a></li>
+					<li><a href="#">할리스 위치 및 연락처</a></li>
+					<li><a href="#">채용안내</a></li>
+					<li><a href="#">가맹문의 및 절차</a></li>
+					<li><a href="#">B2B 사업소개</a></li>
+				</ul>
+			</li>
+			</ul>
+		</div>
+    </header>
+    <section class="sec1">
+        <div class="inner">
+        <div class="textbox">
+            <p>HOLLYS NEWS</p>
+        </div>
+    </div>
+    </section>
+    <section>
+        <div class="small_menu">
+            <div class="inner">
+            <ul>
+                <li><a href="#">EVENT</a></li>
+                <li><a href="#">NOTICE</a></li>
+            </ul>
+        </div>
+        </div>
+    </section>
+    <section>
+        <div class="inner">
+            <h1>HOLLYS <span>EVENT</span></h1>
+        <div class="tabSet">
+            <ul class="tabs">
+                <a href="#panel1-1" class="on" onclick="return false"><li>진행중인 이벤트</li></a>
+                <a href="#panel1-2" class="on" onclick="return false"><li>종료된 이벤트</li></a>
+                <a href="#panel1-3" class="on" onclick="return false"><li>당첨자 발표</li></a>
+            </ul>
+            <div class="panels">
+                <div class="panel" id="panel1-1">
+                   <div class="con1">
+                       <a href="#">
+                       <div class="event_img">
+                       <img src="img/event1.jpg">
+                    </div>
+                       <div class="event1">
+                       <div class="label">멤버십 이벤트</div>
+                       <p class="ev_t">멤버십 회원만이 누리는 3월의 특별한 선물</p>
+                       <p class="dat">2022-03-01 ~ 2022-03-31</p>
+                    </div>
+                </a>
+                </div>
+                       <div class="con2">
+                        <div class="event_img">
+                        <img src="img/event2.jpg">
+                        </div>
+                        <div class="event2">
+                        <div class="label">매장 이벤트</div>
+                        <p class="ev_t">매일 밤 9시부터 모든 케이크 최대 35% OFF</p>
+                        <p class="dat">2022-02-19 ~ 2022-04-30</p>
+                        </div>
+                   </div> 
+                </div>
+                <div class="panel" id="panel1-2">
+                    <div class="con3">
+                        <div class="event_img">
+                        <img src="img/event3.jpg">
+                     </div>
+                        <div class="event3">
+                        <div class="label">멤버십 이벤트</div>
+                        <p class="ev_t">멤버십 회원만이 누리는 3월의 특별한 선물</p>
+                        <p class="dat">2022-03-01 ~ 2022-03-31</p>
+                     </div>
+                     <div class="none">
+                         <div class="none_logo">
+                             <img src="img/non_logo.png">
+                         </div>
+                         <p>이벤트 종료</p>
+                     </div>
+                 </div>
+                        <div class="con4">
+                         <div class="event_img">
+                         <img src="img/event4.jpg">
+                         </div>
+                         <div class="event4">
+                         <div class="label">매장 이벤트</div>
+                         <p class="ev_t">매일 밤 9시부터 모든 케이크 최대 35% OFF</p>
+                         <p class="dat">2022-02-19 ~ 2022-04-30</p>
+                         </div>
+                         <div class="none">
+                            <div class="none_logo">
+                                <img src="img/non_logo.png">
+                            </div>
+                            <p>이벤트 종료</p>
+                        </div>
+                    </div> 
+                    <div class="con5">
+                        <div class="event_img">
+                        <img src="img/event5.jpg">
+                        </div>
+                        <div class="event5">
+                        <div class="label">매장 이벤트</div>
+                        <p class="ev_t">매일 밤 9시부터 모든 케이크 최대 35% OFF</p>
+                        <p class="dat">2022-02-19 ~ 2022-04-30</p>
+                        </div>
+                        <div class="none">
+                            <div class="none_logo">
+                                <img src="img/non_logo.png">
+                            </div>
+                            <p>이벤트 종료</p>
+                        </div>
+                   </div> 
+                </div>
+                <div class="panel" id="panel1-3">
+                    <div class="c_list">
+                        <p>등록된 당첨자 발표가 없습니다.</p>
+                    </div>
+                </div>
+            <!-- /panels --></div>
+        <!-- /tabset --></div>
+
+        <div class="btn">
+            <ul>
+            <li><a href="#"><img src="img/prev-first.png"></li></a>
+            <li><a href="#"></li><span>1</span></li></a>
+            <li><a href="#"></li><img src="img/next-first.png"></li></a>
+        </ul>
+        </div>
+    </div>
+    </section>
+    <footer>
+        <div class="inner">
+            <ul>
+                <li><a href="#">개인정보처리방침</a></li>
+                <li><a href="#">서비스이용약관</a></li>
+                <li><a href="#">멤버십이용약관</a></li>
+                <li><a href="#">할리스카드이용약관</a></li>
+                <li><a href="#">고객문의</a></li>
+                <li><a href="#">고객설문</a></li>
+                <li><a href="#">사이트맵</a></li>
+                <li><a href="#">BI소개</a></li>
+                
+            </ul>
+        </div>
+            <div class="copy">
+        <div class="inner">
+            <p>법인명 : (주) 케이지할리스에프앤비 대표자 : 이종현 사업자등록번호 211-87-61044 통신판매업 : 제 2018-서울종로-0193호</p>
+            <p>주소 : 서울특별시 종로구 율곡로 88 삼환빌딩 8층 (운니동) 대표전화 : 02-2188-7100 (가맹문의 : 02-6350-7229)</p>
+            <p>COPYRIGHT (C) KG HOLLYS F&B ALL Right Reserved.</p>	
+        </div>			
+            </div>
+    </footer>
+</body>
+</html>

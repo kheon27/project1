@@ -1,0 +1,481 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+*{ font-family: 'Noto Sans KR', sans-serif; }
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{color: inherit; text-decoration: none;}
+.inner{width:1280px;margin:0 auto;}
+.clear{clear:both};
+
+/*헤더*/
+header .inner{height:80px;}
+
+nav{height:80px;}
+.logo{
+float:left;
+z-index:999;
+padding-top:10px;
+}
+
+.logo img{width:78px;height:65px;}
+.menu{
+float:right;
+padding-top:10px;
+}
+.menu > li {
+display:inline-block;
+width:150px;
+font-size:20px;
+font-weight:500;
+color:black;
+text-align:center;
+position:relative;
+line-height:60px;
+}
+
+.design{color:  #b51019;}
+
+.menu > li ul.submenu {
+display:none;
+position:absolute;
+width:100%;
+font-size:16px;
+line-height:33px;
+text-align:center;
+font-weight:500;
+z-index:96;
+}
+
+.submenu>li{width:150px;}
+.sub_back {
+display:none;
+position: absolute;
+z-index:50;
+top:80px;
+right: 0px;
+width: 100%;
+height: 235px;
+background-color:#F5F5F5;
+}
+
+nav a:hover{color: #b51019;}
+header:hover{background-color:#F5F5F5;}
+header:hover .menu > li ul.submenu{display:block;}
+header:hover .sub_back{display: block;}
+
+/*섹션 1*/
+.sec1{
+width:100%;
+height:471px;
+background-image:url('../img/about_back.png');
+background-position: center 0;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.textbox{
+text-align:center;}
+
+.textbox p{
+color:white;
+font-weight:700;
+font-size:68px;
+line-height:471px;
+}
+
+/*섹션 2*/
+.small_menu{
+width:100%;
+height:80px;
+border-bottom:2px solid #ddd;
+}
+
+.small_menu ul{text-align:center;}
+
+.small_menu li{
+display:inline-block;
+font-size:20px;
+font-weight:500;
+margin-right:80px;
+line-height:80px;
+}
+
+.small_menu li:nth-child(1){border-bottom:2px solid #b51019;}
+.small_menu li:hover{border-bottom:2px solid #b51019;}
+
+/*섹션 3*/
+.title{
+margin-top:80px;
+margin-bottom:80px;
+text-align:center;
+}
+
+.title h1, .bi_text h1, .color_info h1{
+font-size:38px;
+font-weight:400;
+}
+
+.title span, .bi_text span, .color_info span{
+font-weight:700;
+color: #b51019;
+}
+
+.title p{
+font-size:23px;
+font-weight:300;
+}
+
+.con1{padding-bottom:28px;}
+
+.con1 img{
+margin-left:38px;
+margin-right:28px;
+}
+
+.con1_text, .con2_text{
+display:inline-block;
+box-sizing:border-box;
+width:48%;
+}
+
+.con2_text{
+margin-left:23px;
+margin-right:28px;
+}
+
+.con1 h2{
+padding-top:288px;
+font-size:38px;
+color:#b51019;
+font-weight:700;
+}
+
+.con2 h2{
+padding-top:288px;
+font-size:38px;
+color:#b51019;
+font-weight:700;
+text-align:right;
+}
+
+.con1 p{
+font-size:24px;
+line-height:35px;
+}
+
+.con2{margin-bottom:120px;}
+
+.con2 p{
+font-size:24px;
+line-height:35px;
+text-align:right;
+}
+
+.bi_text{
+text-align:center;
+margin-bottom:85px;
+}
+
+.crown{
+padding-bottom:70px;
+text-align:center;
+}
+
+.crown_info{
+font-size:24px;
+text-align:center;
+line-height:27pt;
+margin-bottom:80px;
+}
+
+.crown_info span{font-weight:700;}
+
+.color_info p{
+font-size:22px;
+text-align:left;
+padding-top:10px;
+margin-right:280px;
+font-weight:400;
+}
+
+.info_item, .info_item2, .pantone{display:inline-block;}
+
+.info_item p, .info_item2 p{
+font-size:22px;
+font-weight:400;
+margin-bottom:10px;
+}
+
+.red_color span{font-weight:700;}
+
+.info_item{
+border-right:2px solid #ddd;
+padding-right:25px;
+}
+
+.info_item2{
+padding-left:13px;
+padding-bottom:20px;
+}
+
+.color_info,.info_item, .info_item2, .pantone{
+float:left;
+}
+
+.info_item, .info_item2{text-align:center;}
+.info_item2{margin-right:70px;}
+.red_color{margin-bottom:130px;}
+
+/*푸터*/
+footer{
+width:100%;
+background-color:black;
+padding-bottom:10px;
+}
+
+footer li{
+display:inline-block;
+font-size:16px;
+color:white;
+font-weight:400;
+margin-right:60px;
+padding-top:20px;
+margin-bottom:20px;
+}
+
+footer li:nth-child(2){color: #b51019;}
+footer a:hover{color: #b51019;}
+
+.copy{
+width:100%;
+border-top:1px solid #6f6f6f;
+padding-top:10px;
+}
+
+footer p{
+font-weight:300;
+color: #6f6f6f;
+font-size:14px;
+}
+
+/*메뉴버튼*/
+.btn_all {
+     width: 30px;
+     height: 30px;
+     position: absolute;
+     top: 24px;
+     right: 30px;
+     z-index: 100
+ }
+ 
+ .btn_all span {
+     position: absolute;
+     left: 0;
+     height: 3px;
+     background-color: #6f6f6f;
+     transition: all .2s ease-in-out;
+     -webkit-transition: all .2s ease-in-out;
+     width: 100%;
+     border-radius: 2px;
+ }
+ 
+ .btn_all span:nth-child(1) {
+     top: 0px;
+ }
+ 
+ .btn_all span:nth-child(2) {
+     top: 10px;
+ }
+ 
+ .btn_all span:nth-child(3) {
+     top: 20px;
+ }
+ 
+ 
+ .btn_all.on span {
+     background-color: #fff
+ }
+ 
+ .btn_all.on span:nth-child(1) {
+     top: 10px;
+     transform: rotate(45deg)
+ }
+ 
+ .btn_all.on span:nth-child(2) {
+     top: 10px;
+     width: 0
+ }
+ 
+ .btn_all.on span:nth-child(3) {
+     top: 10px;
+     transform: rotate(-45deg)
+ }
+ 
+ .box {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.8);
+   z-index: 10;
+   display: none;
+ }
+ .m_menu{
+ width:100%;
+ text-align:center;
+ padding-top:50px;
+ }
+ 
+ .m_menu > li{
+ font-size:1.3em;
+ font-weight:500;
+ color:white;
+ line-height:50px;
+ }
+ 
+ .m_menu > li ul.sub{
+ font-size:0.67em;
+ display:none;
+ line-height:35px;
+ font-weight:300;
+ }
+ 
+ .sub li{height:30px;}
+ /*
+ .m_menu > li:hover .sub{display:block;}*/
+ .m_menu li a.active{color: #b51019;}
+
+/**************************************반응형******************************************/
+
+@media (min-width:1025px) and (max-width:1279px) {
+ 
+     /*첫페이지*/
+     .inner{width:100%}
+     .menu > li{font-size:18px;}
+     .menu > li ul.submenu{font-size:14px;}
+     .slider button{left:100px;}
+ 
+     
+     .con1 img, .con2 img{width:40%;}
+     .con1 h2, .con2 h2{padding-top:0px;}
+
+     .crown img{width:80%;}
+     .crown_info p{font-size:22px;}
+       footer li{font-size:12px;}
+      .red_color{
+     width:80%;
+     margin:0 auto;
+      } 
+
+      .info_item, .info_item2{
+     margin-top:50px;
+      }
+
+     
+ }
+ 
+  @media  (max-width: 1024px){
+      header .innner{
+      text-align:center;
+      width:100%;
+      }
+ 
+      header:hover{background-color:transparent;}
+     .logo{margin-left:30px;}
+     .logo img{width:60px;height:47px;}
+     nav{display:none;}
+     header:hover .sub_back{display:none;}
+    
+     .small_menu{display:none;}
+ 
+     .inner{width:100%;}
+     .sec1{height:300px;}
+     .textbox p{
+     font-size:19px;
+     line-height:300px;
+     padding-right:80px;}
+     .title{
+     margin-top:20px;
+     margin-bottom:20px;
+     }
+     .title h1, .bi_text h1, .color_info h1{
+     font-size:17px;
+     margin-top:10px;}
+     .title p, .bi_text p, .crown_info p, .color_info p, .info_item p, .info_item2 p{
+     text-align:center;
+     margin-right:0px;
+     font-size:12px;
+     line-height: normal;}
+     .con1, .con2{width:80%;text-align:center;margin:0 auto;}
+     .con1 img, .con2 img{
+     width:100%;
+     margin-left:0px;
+     margin-right:0px;}
+     .con1_text, .con2_text{
+     width:100%;
+     margin-left:0px;
+     margin-right:0px;}
+     .con1 h2, .con2 h2{
+     text-align:center;
+     padding-top:0px;
+     font-size:20px;}
+     .con1_text p, .con2_text p{
+     font-size:15px;
+     text-align:center;
+     line-height: normal;}
+
+     .bi_text{
+     margin-top:20px;
+     margin-bottom:20px;
+     }
+
+     .crown, .crown_info, .red_color{
+     margin:0 auto;
+     width:80%;
+     padding-bottom:0px;
+     text-align:center;
+     }
+     .crown img{
+     width:90%;
+     }
+
+     .color_info, .info_item, .info_item2, .pantone{
+          float:none;
+          }
+
+     .info_item, .info_item2{
+     margin-top:10px;
+     margin-right:0px;
+     }
+
+     .pantone img{
+     width:40%;
+     }
+
+         footer .inner{
+             width:100%;
+             text-align:center;
+             }
+           
+             footer ul{
+             padding-left:0px;
+             padding-bottom:0px;
+             }
+           
+             footer li{
+             line-height:0.8em;
+             font-size:0.02em;
+             margin-bottom:10px;
+             padding-top:4px;
+             display:inline;
+             margin-right:30px;
+           
+             }
+             footer p{font-size:0.4em;}
+         
+     }   
+
+
+     @media (min-width:1025px) {
+          .btn_all{display:none;}
+        }

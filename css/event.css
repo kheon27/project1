@@ -1,0 +1,471 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap');
+*{ font-family: 'Noto Sans KR', sans-serif; }
+*{margin: 0; padding: 0;}
+ul{list-style: none;}
+a{color: inherit; text-decoration: none;}
+.inner{width:1280px;margin:0 auto;}
+.clear{clear:both};
+
+/*헤더*/
+header .inner{height:80px;}
+
+nav{height:80px;}
+.logo{
+float:left;
+z-index:999;
+padding-top:10px;
+}
+
+.logo img{width:78px;height:65px;}
+.menu{
+float:right;
+padding-top:10px;
+}
+.menu > li {
+display:inline-block;
+width:150px;
+font-size:20px;
+font-weight:500;
+color:black;
+text-align:center;
+position:relative;
+line-height:60px;
+}
+
+.design{color:  #b51019;}
+
+.menu > li ul.submenu {
+display:none;
+position:absolute;
+width:100%;
+font-size:16px;
+line-height:33px;
+text-align:center;
+font-weight:500;
+z-index:96;
+}
+
+.submenu>li{width:150px;}
+.sub_back {
+display:none;
+position: absolute;
+z-index:50;
+top:80px;
+right: 0px;
+width: 100%;
+height: 235px;
+background-color:#F5F5F5;
+}
+
+nav a:hover{color: #b51019;}
+header:hover{background-color:#F5F5F5;}
+header:hover .menu > li ul.submenu{display:block;}
+header:hover .sub_back{display: block;}
+
+/*섹션 1*/
+.sec1{
+width:100%;
+height:471px;
+background-image:url('../img/evet_back.jpg');
+background-position: center 0;
+background-repeat: no-repeat;
+background-size: cover;
+}
+
+.textbox p{
+color:white;
+font-weight:700;
+font-size:68px;
+text-align:center;
+line-height:471px;
+}
+
+/*섹션 2*/
+.small_menu{
+width:100%;
+height:80px;
+border-bottom:2px solid #ddd;
+}
+
+.small_menu ul{text-align:center;}
+
+.small_menu li{
+display:inline-block;
+font-size:20px;
+font-weight:500;
+margin-right:80px;
+line-height:80px;
+}
+
+.small_menu li:nth-child(1){border-bottom:2px solid #b51019;}
+.small_menu li:hover{border-bottom:2px solid #b51019;}
+
+/*섹션 3*/
+h1{
+font-size:38px;
+font-weight:400;
+text-align:center;
+margin-top:80px;
+margin-bottom:80px;
+}
+
+span{
+font-weight:700;color: #b51019;
+text-align: center;
+}
+
+.tabs{text-align:center;}
+.tabs a.on{border: 1px solid #b51019;}
+.tabs a:hover{border:1px solid #b51019;}
+
+.tabs a{width:356px;
+height:65px;
+border:1px solid #ddd;
+display:inline-block;
+margin-right:-3px;
+font-size:20px;
+font-weight:500;
+text-align:center;
+line-height:65px;
+}
+
+.con1, .con2, .con3, .con4, .con5{
+display:inline-block;
+border: 1px solid #ddd;
+margin-top:65px;
+margin-bottom:73px;
+}
+
+.event_img{
+overflow:hidden;
+height:274px;
+}
+
+.con1:hover img, .con2:hover img{
+	-webkit-transform:scale(1.1);
+	-moz-transform:scale(1.1);
+	-ms-transform:scale(1.1);	
+	-o-transform:scale(1.1);
+	transform:scale(1.1);
+    transition:0.7s;
+}
+.con1, .con3{
+margin-left:105px;
+margin-right:50px;
+}
+
+.con1:hover p, .con2:hover p{color: #b51019;}
+
+.label{
+background-color:#b51019;
+border-radius:10px;
+width:80px;
+font-size:11px;
+color:white;
+text-align:center;
+padding:1px 0;
+margin-left:10px;
+margin-top:12px;
+}
+
+.ev_t{
+font-size:16px;
+font-weight:400;
+margin-left:10px;
+padding:2px 0;
+}
+
+.dat{
+color:#7e7d7d;
+font-size:12px;
+font-weight:300;
+margin-left:10px;
+padding-bottom:12px;
+}
+
+.con3, .con4, .con5{position:relative;}
+.con4{margin-right:50px;}
+
+.none{
+background-color:rgba(0,0,0,0.5);
+position:absolute;
+top:0;
+width:100%;
+height:100%;
+text-align:center;
+}
+
+.none_logo{margin-top:140px;}
+
+.none p{
+color:white;
+font-weight:700;
+font-size:30px;
+}
+
+.c_list{
+width:1280px;
+height:501px;
+text-align:center;
+line-height:501px;
+font-weight:700;
+font-size:28px;
+}
+
+.btn{margin-bottom:125px;}
+
+.btn ul{
+display:flex;
+align-items: center;
+justify-content: center;
+}
+
+.btn li{text-align:center;}
+.btn img:nth-child(1){padding-top:7px;}
+
+.btn span{
+font-weight:500;
+font-size:25px;
+padding:0 5px;
+}
+
+/*푸터*/
+footer{
+width:100%;
+background-color:black;
+padding-bottom:10px;
+}
+
+footer li{
+display:inline-block;
+font-size:16px;
+color:white;
+font-weight:400;
+margin-right:60px;
+padding-top:20px;
+margin-bottom:20px;
+}
+
+footer li:nth-child(2){color: #b51019;}
+footer a:hover{color: #b51019;}
+
+.copy{
+width:100%;
+border-top:1px solid #6f6f6f;
+padding-top:10px;
+}
+
+footer p{
+font-weight:300;
+color: #6f6f6f;
+font-size:14px;
+}
+
+/*메뉴버튼*/
+.btn_all {
+     width: 30px;
+     height: 30px;
+     position: absolute;
+     top: 24px;
+     right: 30px;
+     z-index: 100
+ }
+ 
+ .btn_all span {
+     position: absolute;
+     left: 0;
+     height: 3px;
+     background-color: #6f6f6f;
+     transition: all .2s ease-in-out;
+     -webkit-transition: all .2s ease-in-out;
+     width: 100%;
+     border-radius: 2px;
+ }
+ 
+ .btn_all span:nth-child(1) {
+     top: 0px;
+ }
+ 
+ .btn_all span:nth-child(2) {
+     top: 10px;
+ }
+ 
+ .btn_all span:nth-child(3) {
+     top: 20px;
+ }
+ 
+ 
+ .btn_all.on span {
+     background-color: #fff
+ }
+ 
+ .btn_all.on span:nth-child(1) {
+     top: 10px;
+     transform: rotate(45deg)
+ }
+ 
+ .btn_all.on span:nth-child(2) {
+     top: 10px;
+     width: 0
+ }
+ 
+ .btn_all.on span:nth-child(3) {
+     top: 10px;
+     transform: rotate(-45deg)
+ }
+ 
+ .box {
+   position: fixed;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   background: rgba(0, 0, 0, 0.8);
+   z-index: 10;
+   display: none;
+ }
+ .m_menu{
+ width:100%;
+ text-align:center;
+ padding-top:50px;
+ }
+ 
+ .m_menu > li{
+ font-size:1.3em;
+ font-weight:500;
+ color:white;
+ line-height:50px;
+ }
+ 
+ .m_menu > li ul.sub{
+ font-size:0.67em;
+ display:none;
+ line-height:35px;
+ font-weight:300;
+ }
+ 
+ .sub li{height:30px;}
+ /*
+ .m_menu > li:hover .sub{display:block;}*/
+ .m_menu li a.active{color: #b51019;}
+/*****************************************************************반응형***********************************************/
+
+@media (min-width:1025px) and (max-width:1279px) {
+ 
+    /*첫페이지*/
+    .inner{width:100%}
+    .menu > li{font-size:18px;}
+    .menu > li ul.submenu{font-size:14px;}
+    .slider button{left:100px;}
+
+    .tabSet{text-align:center;}
+    .tabs{margin:0 30px;}   
+    .tabs a{width:300px;}
+    .con1, .con2,.con3, .con4 ,.con5{
+        width:300px;
+        text-align:left;
+        margin-right:30px;
+        }
+    .con1, .con3{margin-left:30px;}    
+
+    .c_list{
+        width:100%;
+        height:auto;
+        font-size:25px;
+        line-height:300px;}
+
+      footer li{font-size:12px;}
+    
+}
+
+ @media  (max-width: 1024px){
+     header .innner{
+     text-align:center;
+     width:100%;
+     }
+
+     header:hover{background-color:transparent;}
+    .logo{margin-left:30px;}
+    .logo img{width:60px;height:47px;}
+    nav{display:none;}
+    header:hover .sub_back{display:none;}
+    .small_menu{display:none;}
+
+    .inner{width:100%;}
+    .sec1{height:300px;}
+    .textbox p{
+    font-size:19px;
+    line-height:300px;
+    padding-right:98px;
+    }
+    h1{
+        font-size:24px;
+        margin-top:20px;
+        margin-bottom:20px;
+        }
+
+    .tabSet{text-align:center;}    
+
+    
+    .tabs a{
+        width:25%;
+        height:45px;
+        font-size:11px;
+        line-height:45px;
+        }
+
+     
+    .con1, .con2,.con3, .con4 ,.con5{
+      
+        width:270px;
+        text-align:left;
+       
+        margin:0 auto;
+        }
+
+     .con1, .con3{
+         margin-top:20px;
+         margin-bottom:20px;
+     }   
+
+     .con4{margin-bottom:20px;}
+    
+        .event_img{height:auto;}
+        .event_img img{width:100%;}
+        .ev_t{font-size:13px;}
+        .label{margin-top:0px;}
+    
+        .none_logo{margin-top:110px;}
+    
+        .c_list{
+        width:100%;
+        height:auto;
+        font-size:17px;
+        line-height:300px;}
+
+        footer .inner{
+            width:100%;
+            text-align:center;
+            }
+          
+            footer ul{
+            padding-left:0px;
+            padding-bottom:0px;
+            }
+          
+            footer li{
+            line-height:0.8em;
+            font-size:0.02em;
+            margin-bottom:10px;
+            padding-top:4px;
+            display:inline;
+            margin-right:30px;
+          
+            }
+            footer p{font-size:0.4em;}
+        
+    }   
+    
+    @media (min-width:1025px) {
+        .btn_all{display:none;}
+      }
